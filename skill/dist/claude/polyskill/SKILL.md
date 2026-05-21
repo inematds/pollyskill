@@ -1,49 +1,10 @@
 ---
-identity:
-  name: polyskill
-  description:
-    full: >
-      Cross-runtime skill optimizer. Use this skill when the user wants to package
-      an Agent Skill so it runs in both Claude Code and OpenAI Codex from a single
-      portable source. Also use when the user wants to import an existing skill
-      (Claude Code or Codex) into the portable format, build/emit for any runtime,
-      install a skill into Claude Code or Codex, or troubleshoot why a skill
-      behaves differently across runtimes.
-    front_loaded: >
-      Use when the user wants to package a skill so it runs in both Claude Code
-      and Codex from one source, import an existing skill into the portable
-      format, install to Claude or Codex, or troubleshoot cross-runtime drift.
-    short: Cross-runtime Agent Skill optimizer
-  license: MIT
-activation:
-  triggers:
-    - polyskill
-    - cross-runtime skill
-    - package my skill for codex
-    - package my skill for claude
-    - make this skill work in both
-    - import my codex skill
-    - import my claude skill
-    - skill optimizer
-  auto_invoke: true
-  user_invoke: true
-dependencies:
-  mcp: []
-  bash:
-    - pattern: polyskill:*
-      reason: drive the polyskill CLI
-    - pattern: node:*
-      reason: invoke the polyskill CLI if not globally linked
-  env: []
-resources:
-  scripts: []
-  references: []
-  assets: []
-behavior:
-  dynamic_injections: []
-constraints:
-  max_body_lines: 500
-  recommended_body_tokens: 5000
+name: polyskill
+description: >
+  Cross-runtime skill optimizer. Use this skill when the user wants to package an Agent Skill so it runs in both Claude Code and OpenAI Codex from a single portable source. Also use when the user
+  wants to import an existing skill (Claude Code or Codex) into the portable format, build/emit for any runtime, install a skill into Claude Code or Codex, or troubleshoot why a skill behaves
+  differently across runtimes.
+allowed-tools: polyskill:* node:*
 ---
 
 # polyskill — Cross-Runtime Skill Optimizer
@@ -130,7 +91,7 @@ cd <name>
 polyskill install
 ```
 
-The skill now lives in both `~/.claude/skills/<name>/` and `~/.agents/skills/<name>/`. The Codex version has its description front-loaded for the 8K catalog cap, dynamic injections (the backtick-bang syntax) rewritten as fallback prose, MCP dependencies hoisted into `agents/openai.yaml`, and any `allowed-tools` patterns surfaced as sandbox guidance.
+The skill now lives in both `~/.claude/skills/<name>/` and `~/.agents/skills/<name>/`. The Codex version has its description front-loaded for the 8K catalog cap, dynamic injections (`` !`shell` ``) rewritten as fallback prose, MCP dependencies hoisted into `agents/openai.yaml`, and any `allowed-tools` patterns surfaced as sandbox guidance.
 
 ### Cross-runtime an existing Codex skill
 

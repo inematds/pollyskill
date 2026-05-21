@@ -1,7 +1,23 @@
 node_modules/
-dist/
-**/dist/
 *.log
 .DS_Store
 .env
 **/.polyskill/
+**/.claude/
+**/.claudex/
+
+# CLI build output (regenerated on install)
+/dist/
+
+# Workspace dist outputs are ignored by default to avoid drift,
+# but the meta-skill + hello-skill example dist/ folders are
+# whitelisted below so `git clone` ships pre-built drag-and-drop
+# install assets to users.
+**/dist/
+!skill/dist/
+!skill/dist/**
+!examples/hello-skill/dist/
+!examples/hello-skill/dist/**
+
+# README copy from gumroad kit — Gumroad polyskill-kit README is the
+# distribution artifact; the repo README is the canonical one.
