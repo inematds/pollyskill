@@ -1,6 +1,8 @@
-# polyskill
+<p align="right">
+  <a href="README.pt.md"><img src="https://img.shields.io/badge/🇧🇷_Leia_em_Português-009C3B?style=for-the-badge&logoColor=white" alt="Leia em Português"></a>
+</p>
 
-> 🇧🇷 Versão em português: [README.pt.md](README.pt.md)
+# polyskill
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-coral.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
