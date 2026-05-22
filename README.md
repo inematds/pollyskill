@@ -1,5 +1,7 @@
 # polyskill
 
+> 🇧🇷 Versão em português: [README.pt.md](README.pt.md)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-coral.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![Agent Skills Standard](https://img.shields.io/badge/Agent_Skills-spec_compliant-success.svg)](https://agentskills.io)
